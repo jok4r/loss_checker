@@ -10,3 +10,4 @@ loss_checker.egg-info/SOURCES.txt
 loss_checker.egg-info/dependency_links.txt
 loss_checker.egg-info/requires.txt
 loss_checker.egg-info/top_level.txt
+loss_checker/cfg/loss_checker.service

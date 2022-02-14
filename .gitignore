@@ -1,3 +1,4 @@
 .idea
 loss_checker.json
 loss_checker/__pycache__
+dist/
