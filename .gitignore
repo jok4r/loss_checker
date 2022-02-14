@@ -1,2 +1,4 @@
 .idea
 loss_checker.json
+loss_checker/__pycache__
+loss_checker.egg-info
