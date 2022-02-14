@@ -17,9 +17,12 @@ if len(sys.argv) > 1:
                     raise RuntimeError("Unsupported OS")
                 question = 'Script will be installed as a service, continue? [y/n]: '
                 # sys.stdout.write(question)
-                print(question, end='')
-                choice = input().lower()
-                if choice == 'y' or (len(sys.argv) > 3 and sys.argv[3] == '-y'):
+                if len(sys.argv) > 3 and sys.argv[3] == '-y':
+                    choice = 'y'
+                else:
+                    print(question, end='')
+                    choice = input().lower()
+                if choice == 'y':
                     print('Installing as a service')
                     shutil.copy(
                         os.path.join(
