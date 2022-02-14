@@ -1,0 +1,2 @@
+oe_common>=1.3.0
+ovcfg
