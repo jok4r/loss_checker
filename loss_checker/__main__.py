@@ -19,7 +19,7 @@ if len(sys.argv) > 1:
                 # sys.stdout.write(question)
                 print(question, end='')
                 choice = input().lower()
-                if choice == 'y':
+                if choice == 'y' or (len(sys.argv) > 3 and sys.argv[3] == '-y'):
                     print('Installing as a service')
                     shutil.copy(
                         os.path.join(
@@ -41,7 +41,7 @@ if len(sys.argv) > 1:
                 question = 'Servce %s will be uninstalled, continue? [y/n]: '
                 print(question, end='')
                 choice = input().lower()
-                if choice == 'y':
+                if choice == 'y' or (len(sys.argv) > 3 and sys.argv[3] == '-y'):
                     os.system('systemctl disable %s' % daemon_name)
                     os.system('systemctl stop %s' % daemon_name)
                     os.system('systemctl daemon-reload')
