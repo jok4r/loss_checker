@@ -26,7 +26,7 @@ if len(sys.argv) > 1:
                     print('Installing as a service')
                     shutil.copy(
                         os.path.join(
-                            os.path.abspath(pathlib.Path(__file__).parent.resolve()),
+                            os.path.dirname(os.path.abspath(__file__)),
                             'cfg/%s.service' % daemon_name
                         ),
                         '/lib/systemd/system'
