@@ -37,8 +37,8 @@ class Client:
 
         except socket.timeout:
             print('%s: timeout' % server_address[0])
-            self.del_from_sent(server_address, message)
         finally:
+            self.del_from_sent(server_address, message)
             sock.close()
 
     def add_to_sent(self, address, message):
