@@ -5,6 +5,13 @@ from loss_checker import Server
 import shutil
 import pathlib
 import oe_common
+import signal
+
+
+def signal_handler(sig, frame):
+    print("Pressed Ctrl+C, exiting...")
+    os.kill(os.getpid(), signal.SIGTERM)
+
 
 if len(sys.argv) > 1:
     if sys.argv[1] == '--client':
@@ -52,6 +59,8 @@ if len(sys.argv) > 1:
                 else:
                     print("Removing canceled")
                 sys.exit(0)
+        signal.signal(signal.SIGINT, signal_handler)
         Server().server_c()
 else:
+    signal.signal(signal.SIGINT, signal_handler)
     Client().client_c()
