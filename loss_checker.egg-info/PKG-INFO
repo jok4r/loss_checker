@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: loss-checker
-Version: 0.5.1
+Version: 0.6
 Summary: Loss Checker
 Home-page: https://github.com/jok4r/loss_checker
 Author: Dmitry Yakovlev
 Author-email: opensuse12@gmail.com
 License: UNKNOWN
 Platform: UNKNOWN
-Requires-Python: >=3.7
+Requires-Python: >=3.5
 
 UNKNOWN
 
